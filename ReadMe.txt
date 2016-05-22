@@ -7,3 +7,6 @@ tutorial: https://spring.io/guides/gs/producing-web-service/
 
 See generated WSDL:
     http://localhost:8080/ws/countries.wsdl
+
+To test web-service run in command line:
+    curl.exe --header "content-type: text/xml" -d @requestByCountry.xml http://localhost:8080/ws

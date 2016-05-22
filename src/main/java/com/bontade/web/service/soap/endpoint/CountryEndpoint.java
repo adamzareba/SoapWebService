@@ -1,6 +1,8 @@
 package com.bontade.web.service.soap.endpoint;
 
 import com.bontade.web.service.repository.soap.CountryRepository;
+import io.spring.guides.gs_producing_web_service.GetCountryByNameRequest;
+import io.spring.guides.gs_producing_web_service.GetCountryByNameResponse;
 import io.spring.guides.gs_producing_web_service.GetCountryRequest;
 import io.spring.guides.gs_producing_web_service.GetCountryResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,20 @@ public class CountryEndpoint {
     @ResponsePayload
     public GetCountryResponse getCountry(@RequestPayload GetCountryRequest request) {
         GetCountryResponse response = new GetCountryResponse();
+        response.setCountry(countryRepository.findCountry(request.getName()));
+
+        return response;
+    }
+
+    /**
+     * duplicate of {@link #getCountry(GetCountryRequest) getComponentAt} method
+     * @param request
+     * @return
+     */
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCountryByNameRequest")
+    @ResponsePayload
+    public GetCountryByNameResponse getCountryByName(@RequestPayload GetCountryByNameRequest request) {
+        GetCountryByNameResponse response = new GetCountryByNameResponse();
         response.setCountry(countryRepository.findCountry(request.getName()));
 
         return response;

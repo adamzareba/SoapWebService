@@ -1,4 +1,4 @@
-package com.bontade.web.service.config;
+package com.bontade.web.service.soap.config;
 
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;

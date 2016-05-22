@@ -1,6 +1,6 @@
 package com.bontade.web.service.soap.endpoint;
 
-import com.bontade.web.service.repository.soap.CountryRepository;
+import com.bontade.web.service.soap.repository.CountryRepository;
 import io.spring.guides.gs_producing_web_service.GetCountryByNameRequest;
 import io.spring.guides.gs_producing_web_service.GetCountryByNameResponse;
 import io.spring.guides.gs_producing_web_service.GetCountryRequest;

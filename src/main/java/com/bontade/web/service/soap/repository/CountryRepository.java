@@ -1,4 +1,4 @@
-package com.bontade.web.service.repository.soap;
+package com.bontade.web.service.soap.repository;
 
 import io.spring.guides.gs_producing_web_service.Country;
 import io.spring.guides.gs_producing_web_service.Currency;
